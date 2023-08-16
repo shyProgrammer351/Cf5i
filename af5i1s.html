@@ -1,0 +1,24 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="./../../JS2OneDrive_Web_C/C0501.js"></script> 		<script type="text/javascript" src="https://shyprogrammer351.github.io/reading/functions.js"></script> 		<link rel="stylesheet" href="https://shyprogrammer351.github.io/reading/layout.css"> 		<script> 			var d10 = "1 2 3 4 5 6 5 6 5 6 5 7 8"; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>알파벳 소문자 단어를 입력받아 대문자 단어를 출력하는 문제입니다 실행순서를 클릭하세요 </pre> 				<pre class='selectable'>알파벳 소문자 단어를 입력하세요: <b><font color='red'>cat</font></b>
+소문자 cat의 대문자는 CAT입니다^^
+</pre><br>  	 				<h4>프로그램 코드</h4> 				<pre></pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt; 
+
+</pre><pre id="code1" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(1)">1	int main()
+</pre><pre id="code0" class="unselectable codeClass">	{																																			
+</pre><pre id="code0" class="unselectable codeClass">		char lowercase[5] = { '\0' }; 
+</pre><pre id="code0" class="unselectable codeClass">		char uppercase[5] = { '\0' };
+</pre><pre id="code2" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(2)">2		int  index = 0;
+
+</pre><pre id="code3" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(3)">3		printf("알파벳 소문자 단어를 입력하세요: " );
+</pre><pre id="code4" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(4)">4		scanf( "%s", lowercase );						
+
+</pre><pre id="code5" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(5)">5		for ( index = 0; lowercase[ index ] != '\0'; index++ )			
+</pre><pre id="code0" class="unselectable codeClass">		{																																			
+</pre><pre id="code6" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(6)">6			uppercase[ index ] = lowercase[ index ] - 'a' + 'A';		
+</pre><pre id="code0" class="unselectable codeClass">		}																																			
+
+</pre><pre id="code7" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(7)">7		printf("소문자 %s의 대문자는 %s입니다^^", lowercase, uppercase );	
+
+</pre><pre id="code8" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(8)">8		return 0;
+</pre><pre id="code0" class="unselectable codeClass">	}																																			
+</pre>
+</pre> 			</div> 			<div id = "floatingBox"> 				<b>실행 순서</b> 				<pre id = "d4" style='white-space:normal; word-wrap:break-word; width:150px;'></pre> 			</div> 		</div> 	</body> </html>   
