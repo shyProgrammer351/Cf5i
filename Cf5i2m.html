@@ -5,16 +5,17 @@
  찾았다!
  1, 2, 3 중에서 공을 숨긴 컵을 찾으세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
 </div> 
-</pre><br> 				<h4>3 4 5 이후의 실행순서(5개) 및 실행상태</h4>
-<pre style='margin:0;padding:0;'><a href='#6'>6</a>  printf( "\n\n 1, 2, 3 중에서 공을 숨긴 컵을 찾으세요 : " );</pre>
+</pre><br> 				<h4>3 4 5 이후의 실행순서(6개) 및 실행상태</h4>
+<pre style='margin:0;padding:0;'><a href='#6'>6</a>  printf( "\n\n 1, 2, 3 중에서 공을 숨긴 컵을 찾으세요 : " ); </pre>
 <pre style='font-family:monospace; background-color:black; color:white; width:807px; margin:0; padding:0;'> 1, 2, 3 중에서 공을 숨긴 컵을 찾으세요 : </pre><br>
 <pre style='margin:0;padding:0;'><a href='#7'>7</a>  scanf( "%d", &cup );</pre>
 <pre style='font-family:monospace; background-color:black; color:white; width:807px; margin:0; padding:0;'>1<br></pre> <table style="font-size:10pt; background:Silver; border:0px; border-spacing:0px; margin:0px;padding:0;"> <tbody id="value_table"> <tr></tr> <tr> <td colspan='1' style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:0px solid Silver; background:Silver;">&nbsp; &nbsp; &nbsp;</td> <td colspan='1' style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:0px solid Silver; background:Silver;">main()</td></tr> <tr> <td colspan='1' style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">ball</td> <td colspan='1' style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:Silver;">1</td></tr> <tr> <td colspan='1' style = "font-family:monospace;margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">cup</td> <td colspan='1' style = "font-family:monospace;margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:Silver;"> <input id='blank0' type='text' required minlength='1' maxlength='30' size='10' onchange='sP3f6(0)'> </td></tr> </tbody> </table> <br>
 <pre style='margin:0;padding:0;'><a href='#8'>8</a>  printf( " \033[4;%dfO\n \033[5;%df", (ball*7-3), (cup*7-5) );</pre>
 <pre style='font-family:monospace; background-color:black; color:white; width:807px; margin:0; padding:0;'>  ___    ___    ___  <br> |   |  |   |  |   | <br> | 1 |  | 2 |  | 3 | <br>   O <br><br><br> 1, 2, 3 중에서 공을 숨긴 컵을 찾으세요 : 1<br></pre><br>
 <pre style='margin:0;padding:0;'><a href='#9'>9</a>  ( cup == ball ) ? </pre><br>
-<pre style='margin:0;padding:0;'><a href='#10'>10</a>   printf( "찾았다!\n"): </pre>
+<pre style='margin:0;padding:0;'><a href='#10'>10</a>   printf( "찾았다!\n") : </pre>
 <pre style='font-family:monospace; background-color:black; color:white; width:807px; margin:0; padding:0;'>  ___    ___    ___  <br> |   |  |   |  |   | <br> | 1 |  | 2 |  | 3 | <br>   O <br> 찾았다!<br><br> 1, 2, 3 중에서 공을 숨긴 컵을 찾으세요 : 1<br></pre><br>
+<pre style='margin:0;padding:0;'><a href='#12'>12</a>  return 0;</pre><br>
  	   				<br><h4>프로그램 코드</h4> 				<pre>	
 	#include &lt;stdio.h&gt;
 	#include &lt;stdlib.h&gt;
@@ -27,13 +28,13 @@
 <a href='javascript:history.back();' name='3'>3</a>		printf( "  ___    ___    ___  \n" );
 <a href='javascript:history.back();' name='4'>4</a>		printf( " |   |  |   |  |   | \n" );
 <a href='javascript:history.back();' name='5'>5</a>		printf( " | 1 |  | 2 |  | 3 | \n\n\n\n" );
-<a href='javascript:history.back();' name='6'>6</a>		printf( "\n\n 1, 2, 3 중에서 공을 숨긴 컵을 찾으세요 : " );
+<a href='javascript:history.back();' name='6'>6</a>		printf( "\n\n 1, 2, 3 중에서 공을 숨긴 컵을 찾으세요 : " ); 
 		int cup = 0;
 <a href='javascript:history.back();' name='7'>7</a>		scanf( "%d", &cup );
 			
 <a href='javascript:history.back();' name='8'>8</a>		printf( " \033[4;%dfO\n \033[5;%df", (ball*7-3), (cup*7-5) );
 <a href='javascript:history.back();' name='9'>9</a>		( cup == ball ) ? 
-<a href='javascript:history.back();' name='10'>10</a>			printf( "찾았다!\n"): 
+<a href='javascript:history.back();' name='10'>10</a>			printf( "찾았다!\n") : 
 <a href='javascript:history.back();' name='11'>11</a>			printf( "놓쳤다!\n" ); 
 	
 <a href='javascript:history.back();' name='12'>12</a>		return 0;

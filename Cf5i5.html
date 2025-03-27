@@ -22,13 +22,13 @@ WASD와 [Enter]를 입력하세요: <b><span style='color:rgb(255,0,0);'>s</span
   [        문
       옷-> 
 </div> 
-</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;캐릭터의 초기 위치를 출력 <br>&nbsp; &nbsp;이동 방향 입력 받기 <br>&nbsp; &nbsp;이동 결과 출력 <br>&nbsp; &nbsp;&nbsp; &nbsp;W는 위로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;A는 왼쪽으로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;S는 아래로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;D는 오른쪽으로 이동 <br>프로그램 종료 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='sP3f5();'/></h4>  				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter05/Direction.c</font>
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;먼저, 캐릭터의 초기 위치를 출력 <br>&nbsp; &nbsp;이동 방향 입력 받기 <br>&nbsp; &nbsp;WASD 입력에 따른 이동 결과 출력 <br>&nbsp; &nbsp;&nbsp; &nbsp;W는 위로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;A는 왼쪽으로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;S는 아래로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;D는 오른쪽으로 이동 <br>프로그램 종료 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='sP3f5();'/></h4>  				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter05/Direction.c</font>
 </pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt;
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 프로그램 시작 </b></font>
 </pre>
 <pre id="code1" class="unselectable codeClass">1	int main() {
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 캐릭터의 초기 위치를 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 먼저, 캐릭터의 초기 위치를 출력 </b></font>
 </pre>
 <pre id="code2" class="unselectable codeClass">2		printf( "      / \n" );
 </pre>
@@ -43,37 +43,37 @@ WASD와 [Enter]를 입력하세요: <b><span style='color:rgb(255,0,0);'>s</span
 </pre>
 <pre id="code6" class="unselectable codeClass">6		scanf( "%c", &direction);
 </pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 이동 결과 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> WASD 입력에 따른 이동 결과 출력 </b></font>
 </pre>
-<pre id="code7" class="unselectable codeClass">7		printf( " <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[2;6f  " );
+<pre id="code7" class="unselectable codeClass">7		printf( " \033[2;6f  " );
 </pre>
 <pre id="code8" class="unselectable codeClass">8		<a href='../Cf5i/Cf5i0.html' target='keyword'>switch</a>( direction ) {
 </pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> W는 위로 이동 </b></font>
 </pre>
 <pre id="code9" class="unselectable codeClass">9			<a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'w'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a> <a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'W'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a>
 </pre>
-<pre id="code10" class="unselectable codeClass">10				printf( " <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[1;6f 옷/ <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[7;15f" );
+<pre id="code10" class="unselectable codeClass">10				printf( " \033[1;6f 옷/ \033[7;15f" );
 </pre>
 <pre id="code11" class="unselectable codeClass">11				<a href='../Cf5i/Cf5i0.html' target='keyword'>break</a>;
 </pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> A는 왼쪽으로 이동 </b></font>
 </pre>
 <pre id="code12" class="unselectable codeClass">12			<a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'a'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a> <a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'A'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a>
 </pre>
-<pre id="code13" class="unselectable codeClass">13				printf( " <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[2;1f 옷] <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[7;15f" );
+<pre id="code13" class="unselectable codeClass">13				printf( " \033[2;1f 옷] \033[7;15f" );
 </pre>
 <pre id="code14" class="unselectable codeClass">14				<a href='../Cf5i/Cf5i0.html' target='keyword'>break</a>;
 </pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> S는 아래로 이동 </b></font>
 </pre>
 <pre id="code15" class="unselectable codeClass">15			<a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 's'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a> <a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'S'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a>
 </pre>
-<pre id="code16" class="unselectable codeClass">16				printf( " <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[3;6f 옷-&gt; <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[7;15f" );
+<pre id="code16" class="unselectable codeClass">16				printf( " \033[3;6f 옷-&gt; \033[7;15f" );
 </pre>
 <pre id="code17" class="unselectable codeClass">17				<a href='../Cf5i/Cf5i0.html' target='keyword'>break</a>;
 </pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> D는 오른쪽으로 이동 </b></font>
 </pre>
 <pre id="code18" class="unselectable codeClass">18			<a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'd'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a> <a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'D'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a>
 </pre>
-<pre id="code19" class="unselectable codeClass">19				printf( " <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[2J <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[4;15fSUCCESS! <a href='../Cf1i/Cf1i0.html' target='keyword'>\033</a>[7;15f" );
+<pre id="code19" class="unselectable codeClass">19				printf( " \033[2J \033[4;15fSUCCESS! \033[7;15f" );
 </pre><pre id="code0" class="unselectable codeClass">		}
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 프로그램 종료 </b></font>
