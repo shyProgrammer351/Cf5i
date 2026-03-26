@@ -22,55 +22,55 @@
   [        D
       옷-> 
 </div> 
-</pre><br> 	  				<h4>알고리즘 설계</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;먼저, 캐릭터의 초기 위치를 출력 <br>&nbsp; &nbsp;이동 방향 입력 받기 <br>&nbsp; &nbsp;WASD 입력에 따른 이동 결과 출력 <br>&nbsp; &nbsp;&nbsp; &nbsp;W는 위로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;A는 왼쪽으로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;S는 아래로 이동 <br>&nbsp; &nbsp;&nbsp; &nbsp;D는 오른쪽으로 이동 <br>프로그램 종료 <br></pre> 				 		 				<br> 				<table> 					<tr> 						<td><h4> 프로그램 구현 </h4> </td> 						<td> &nbsp; &nbsp; &nbsp; <input id='btn' type='button' value='실행 순서·상태 점검' onclick='sP3f5();'/><br> &nbsp; </td> 						<td> <pre style='white-space:normal; width:400px;'> ※ 단계별 점검: A키(이전), D키(다음) <br> &nbsp; </pre></td> 					</tr> 				</table> 				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter05/WeaponItem.c</font>
+</pre><br> 	  				<h4>알고리즘 설계</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;먼저, 캐릭터를 중심으로 상하좌우에 놓인 아이템을 출력 <br>&nbsp; &nbsp;이동 방향 WASD 입력 받기 <br>&nbsp; &nbsp;입력에 따른 이동 결과 출력 <br>&nbsp; &nbsp;&nbsp; &nbsp;W는 위로 이동해서 칼을 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;A는 왼쪽으로 이동해서 방패를 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;S는 아래로 이동해서 창을 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;D는 오른쪽으로 이동해서 활을 획득 <br>프로그램 종료 <br></pre> 				 		 				<br> 				<table> 					<tr> 						<td><h4> 프로그램 구현 </h4> </td> 						<td> &nbsp; &nbsp; &nbsp; <input id='btn' type='button' value='실행 순서·상태 점검' onclick='sP3f5();'/><br> &nbsp; </td> 						<td> <pre style='white-space:normal; width:400px;'> ※ 단계별 점검: A키(이전), D키(다음) <br> &nbsp; </pre></td> 					</tr> 				</table> 				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter05/WeaponItem.c</font>
 </pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt;
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 프로그램 시작 </b></font>
 </pre>
 <pre id="code1" class="unselectable codeClass">1	int main() {
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 먼저, 캐릭터의 초기 위치를 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 먼저, 캐릭터를 중심으로 상하좌우에 놓인 아이템을 출력 </b></font>
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( "      / \n" );
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( "  [   옷   D\n" );
 </pre>
 <pre id="code2" class="unselectable codeClass">2		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( "      -&gt; \n\n" );
 </pre><pre id="code0" class="unselectable codeClass">		 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 이동 방향 입력 받기 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 이동 방향 WASD 입력 받기 </b></font>
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( "방향키(WASD)와 [Enter]를 입력하세요: " );
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf3i/Cf3i0.html#2' target='keyword'>char</a> direction = '\0';
 </pre>
 <pre id="code3" class="unselectable codeClass">3		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>scanf</a>( "<a href='../Cf2i/Cf2i0.html#2' target='keyword'>%c</a>", &direction);
 </pre><pre id="code0" class="unselectable codeClass">		 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> WASD 입력에 따른 이동 결과 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 입력에 따른 이동 결과 출력 </b></font>
 </pre>
 <pre id="code4" class="unselectable codeClass">4		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( " \033[2;6f  " );
 </pre>
 <pre id="code5" class="unselectable codeClass">5		<a href='../Cf5i/Cf5i0.html' target='keyword'>switch</a>( direction ) {
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> W는 위로 이동 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> W는 위로 이동해서 칼을 획득  </b></font>
 </pre>
 <pre id="code6" class="unselectable codeClass">6			<a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'w'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a> <a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'W':
 </pre>
 <pre id="code7" class="unselectable codeClass">7				<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( " \033[1;6f 옷/ \033[7;15f" );
 </pre>
 <pre id="code8" class="unselectable codeClass">8				<a href='../Cf5i/Cf5i0.html' target='keyword'>break</a>;
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> A는 왼쪽으로 이동 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> A는 왼쪽으로 이동해서 방패를 획득 </b></font>
 </pre>
 <pre id="code9" class="unselectable codeClass">9			<a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'a'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a> <a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'A':
 </pre>
 <pre id="code10" class="unselectable codeClass">10				<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( " \033[2;1f 옷] \033[7;15f" );
 </pre>
 <pre id="code11" class="unselectable codeClass">11				<a href='../Cf5i/Cf5i0.html' target='keyword'>break</a>;
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> S는 아래로 이동 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> S는 아래로 이동해서 창을 획득 </b></font>
 </pre>
 <pre id="code12" class="unselectable codeClass">12			<a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 's'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a> <a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'S':
 </pre>
 <pre id="code13" class="unselectable codeClass">13				<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( " \033[3;6f 옷-&gt; \033[7;15f" );
 </pre>
 <pre id="code14" class="unselectable codeClass">14				<a href='../Cf5i/Cf5i0.html' target='keyword'>break</a>;
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> D는 오른쪽으로 이동 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> D는 오른쪽으로 이동해서 활을 획득 </b></font>
 </pre>
 <pre id="code15" class="unselectable codeClass">15			<a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'd'<a href='../Cf5i/Cf5i0.html' target='keyword'>:</a> <a href='../Cf5i/Cf5i0.html' target='keyword'>case</a> 'D':
 </pre>
-<pre id="code16" class="unselectable codeClass">16				<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( " \033[2J \033[4;15fSUCCESS! \033[7;15f" );
+<pre id="code16" class="unselectable codeClass">16				<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( " \033[2;9f 옷D \033[7;15f" );
 </pre><pre id="code0" class="unselectable codeClass">		}
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 프로그램 종료 </b></font>
