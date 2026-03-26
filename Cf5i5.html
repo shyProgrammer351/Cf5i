@@ -4,37 +4,34 @@
 방향키(WASD)와 [Enter]를 입력하세요: <b><span style='color:rgb(0,0,255);'>a</span></b>
       / 
  옷]       D
-      -> 
-</div> 
+      -> </div> 
 </pre><br><pre class='selectable'><div style='font-family:monospace;'>      / 
   [   옷   D
       -> 
 방향키(WASD)와 [Enter]를 입력하세요: <b><span style='color:rgb(0,0,255);'>W</span></b>
       옷/ 
   [        D
-      -> 
-</div> 
+      -> </div> 
 </pre><br><pre class='selectable'><div style='font-family:monospace;'>      / 
   [   옷   D
       -> 
 방향키(WASD)와 [Enter]를 입력하세요: <b><span style='color:rgb(0,0,255);'>s</span></b>
       / 
   [        D
-      옷-> 
-</div> 
-</pre><br> 	  				<h4>알고리즘 설계</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;먼저, 캐릭터를 중심으로 상하좌우에 놓인 아이템을 출력 <br>&nbsp; &nbsp;이동 방향 WASD 입력 받기 <br>&nbsp; &nbsp;입력에 따른 이동 결과 출력 <br>&nbsp; &nbsp;&nbsp; &nbsp;W는 위로 이동해서 칼을 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;A는 왼쪽으로 이동해서 방패를 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;S는 아래로 이동해서 창을 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;D는 오른쪽으로 이동해서 활을 획득 <br>프로그램 종료 <br></pre> 				 		 				<br> 				<table> 					<tr> 						<td><h4> 프로그램 구현 </h4> </td> 						<td> &nbsp; &nbsp; &nbsp; <input id='btn' type='button' value='실행 순서·상태 점검' onclick='sP3f5();'/><br> &nbsp; </td> 						<td> <pre style='white-space:normal; width:400px;'> ※ 단계별 점검: A키(이전), D키(다음) <br> &nbsp; </pre></td> 					</tr> 				</table> 				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter05/WeaponItem.c</font>
+      옷-> </div> 
+</pre><br> 	  				<h4>알고리즘 설계</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;캐릭터를 중심으로 상하좌우에 놓인 아이템을 출력 <br>&nbsp; &nbsp;캐릭터의 이동 방향 WASD 입력 받기 <br>&nbsp; &nbsp;입력에 따른 이동 결과 출력 <br>&nbsp; &nbsp;&nbsp; &nbsp;W는 위로 이동해서 칼을 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;A는 왼쪽으로 이동해서 방패를 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;S는 아래로 이동해서 창을 획득 <br>&nbsp; &nbsp;&nbsp; &nbsp;D는 오른쪽으로 이동해서 활을 획득 <br>프로그램 종료 <br></pre> 				 		 				<br> 				<table> 					<tr> 						<td><h4> 프로그램 구현 </h4> </td> 						<td> &nbsp; &nbsp; &nbsp; <input id='btn' type='button' value='실행 순서·상태 점검' onclick='sP3f5();'/><br> &nbsp; </td> 						<td> <pre style='white-space:normal; width:400px;'> ※ 단계별 점검: A키(이전), D키(다음) <br> &nbsp; </pre></td> 					</tr> 				</table> 				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter05/WeaponItem.c</font>
 </pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt;
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 프로그램 시작 </b></font>
 </pre>
 <pre id="code1" class="unselectable codeClass">1	int main() {
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 먼저, 캐릭터를 중심으로 상하좌우에 놓인 아이템을 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 캐릭터를 중심으로 상하좌우에 놓인 아이템을 출력 </b></font>
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( "      / \n" );
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( "  [   옷   D\n" );
 </pre>
 <pre id="code2" class="unselectable codeClass">2		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( "      -&gt; \n\n" );
 </pre><pre id="code0" class="unselectable codeClass">		 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 이동 방향 WASD 입력 받기 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 캐릭터의 이동 방향 WASD 입력 받기 </b></font>
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf2i/Cf2i0.html#2' target='keyword'>printf</a>( "방향키(WASD)와 [Enter]를 입력하세요: " );
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf3i/Cf3i0.html#2' target='keyword'>char</a> direction = '\0';
 </pre>
